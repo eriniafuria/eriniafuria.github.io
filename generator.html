@@ -1,17 +1,63 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+  background-color: #FFD700;
+}
+h1 {
+  text-align: center;
+  padding: 25px 0;
+}
+.container {
+  padding: 1rem 1.5rem;
+  border: 1px solid black;
+  width: 450px;
+  background-color: #DAA520;
+  font-size:70%
+}
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+button {
+   background-color: #D2691E;
+   font-size: 15px;
+   width: 20%;
+   height: 25px;
+}
+   </style>
+
 </head>
 
-<body style="background-color:#FFD700;">
-
+<body>
+<form id="passwordGeneratorForm">
+<div class="container">
 <h1 style="font-family:courier;">Генератор паролей</h1>
-<p><b>Кол-во символов:</b>
+<div class="options">
+    <div class="option">
+    <p><b>Количество символов:</b>
     <input type="numbers" name="numbers" id="password-length">
-    <label for="password-length"></label>   
+    <label for="password-length"></b></label> 
 </p>
+</div>  
+<div class="option">
 <p><b>Буквы</b>
    <input type="radio" name="letters" id="lowercase" value="lowercase">
    <label for="lowercase">только маленькие</label>
@@ -20,20 +66,26 @@
    <input type="radio" name="letters" id="loweruppercase" value="loweruppercase"> 
    <label for="loweruppercase">большие и маленькие</label>
 </p>
+</div>
+<div class="option">
 <p><b>Включать ли цифры</b>
    <input type="radio" name="answer" id="positive" value="yes">
    <label for="positive">Да</label>
    <input type="radio" name="answer" id="negative" value="no">
    <label for="negative">Нет</label>
 </p>
+</div>
+<div class="option">
 <p><b>Включать ли спец символы ;%:?*()</b>
    <input type="radio" name="symbols" id="plus" value="yes">
    <label for="positive">Да</label>
    <input type="radio" name="symbols" id="minus" value="no">
    <label for="negative">Нет</label>
 </p>
-<button type="button" onclick="generatePassword()">Submit</button>
-<div style="background-color:white;color:black;padding:40px;border: 1px black;width: 10%;height: 5px;" id="result">
+</div>
+<button type="button" onclick="generatePassword()"><b>Submit</b></button>
+<div style="background-color:white;color:black;padding:30px;border: 2px black;width: 50%;height: 3px;" id="result">
+</div>
 </div>
 <script>
 function generatePassword() { 
@@ -83,8 +135,10 @@ for (i=0;i<x;i++) {
 }
 document.getElementById ('result').innerHTML=password;
 }
+
 </script>
 
+</form>
 </body>
 
 </html>
