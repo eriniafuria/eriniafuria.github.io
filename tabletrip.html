@@ -44,7 +44,6 @@ h1 {
 </table>
 <script>
   function myCreateFunction() {    
-  let trips = [ trip1,trip2,trip3,trip4,trip5,trip6 ]
 const trip1 = {
 trip: "Фестиваль Былинный берег",
 place: "Россия, Тверская область, Кимрский район, берег реки Волга рядом с деревней Топорок",
@@ -75,6 +74,7 @@ trip: "Провести время с другом из Испании",
 place: "Турция,Стамбул",
 date: "03 октября – 06 октября",
 }
+let trips = [ trip1,trip2,trip3,trip4,trip5,trip6 ]
 var table = document.getElementById("myTable");
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
@@ -84,7 +84,7 @@ var table = document.getElementById("myTable");
     cell2.innerHTML = trips[1].place;
     cell3.innerHTML = trips[2].date;
   }
-  document.addEventListener("DOMContentLoaded",myCreateFunction)
+  document.addEventListener("DOMContentLoaded",myCreateFunction);
   </script>
 </body>
 </html>
