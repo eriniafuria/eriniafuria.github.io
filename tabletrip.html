@@ -51,8 +51,8 @@ button:hover {
     </tr>
 </table>
 <script>
-  function myDeleteFunction() {
-document.getElementById("myTable").deleteRow(1);
+  function myDeleteFunction(i) {
+document.getElementById("myTable").deleteRow(1+i);
   }
   function myCreateFunction() {    
 const trip1 = {
@@ -98,7 +98,7 @@ var cell4 = row.insertCell(3);
 cell1.innerHTML = a.trip;
 cell2.innerHTML = a.place;
 cell3.innerHTML = a.date;
-cell4.innerHTML = '<button type="button" onclick="myDeleteFunction()" id="Delete">Delete</button>';
+cell4.innerHTML = '<button type="button" onclick="myDeleteFunction(' + i + ')" id="Delete">Delete</button>';
 }
  }
 document.addEventListener("DOMContentLoaded",myCreateFunction);
