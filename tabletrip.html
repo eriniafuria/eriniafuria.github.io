@@ -10,6 +10,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #dbe6cc;
+  display: none;
+  background-color: #99d699;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px; 
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+.addbtn {
+    margin-left: 15px;
+    color: rgb(13, 14, 13);
+    font-weight: bold;
+    float: left;
+    font-size: 15px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #1fa753;
+}
+.addbtn:hover {
+    color: rgb(51, 143, 29);
+}
 body {
     background-color: #66CDAA;
 }
@@ -31,17 +72,19 @@ h1 {
   text-align: center;
   padding: 25px 0;
 }
-button {
+.button {
    background-color: #00b300;
    width: 100%;
 }
-button:hover {
+.button:hover {
   background-color: #3e8e41;
 }
 </style>
 </head>
 <body>
 <h1><b>Мои путешествия &#9992</b></h1>
+<div class="absolute" id="modalWindow"><button type="button" class="closebtn" onclick="closeWindow()"id="Close">X</button>
+Это модальное окно</div>;
 <table id="myTable">
    <tr>
       <th>Поездка</th>
@@ -50,7 +93,14 @@ button:hover {
       <th>Действие</th> 
     </tr>
 </table>
+<button type="button" class="addbtn" onclick="CreateRowFunction()" id="NewRow">Добавить путешествие</button>;
 <script>
+  function CreateRowFunction() {
+    document.getElementById("modalWindow").style.display ='block';
+  }
+  function closeWindow() {
+document.getElementById("modalWindow").style.display ='none';
+  }
   function myDeleteFunction(i) {
 document.getElementById("myTable").deleteRow(1+i);
   }
@@ -98,7 +148,7 @@ var cell4 = row.insertCell(3);
 cell1.innerHTML = a.trip;
 cell2.innerHTML = a.place;
 cell3.innerHTML = a.date;
-cell4.innerHTML = '<button type="button" onclick="myDeleteFunction(' + i + ')" id="Delete">Delete</button>';
+cell4.innerHTML = '<button type="button" class="button" onclick="myDeleteFunction(' + i + ')" id="Delete">Delete</button>';
 }
  }
 document.addEventListener("DOMContentLoaded",myCreateFunction);
