@@ -5,13 +5,22 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My site</title>
 <style>
-body {
-  background-image: url("DSC_0677.jpg");
-  background-color: #cccccc;
+.block1 {
+  position: relative;
   height: 500px; 
   background-position: center;  
   background-repeat: no-repeat; 
+}
+.block1::before {
+  content: "";
+  background-image: url("DSC_0677.jpg");
   background-size: cover;
+  position: absolute;  
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.01;
 }
 .block2 { 
     width: 50%; 
@@ -40,7 +49,7 @@ h2 {
     height: 65%;
 }
 .block3 {
-    width: 50%; 
+    width: 100%; 
     background: powderblue; 
     padding: 25px; 
     align: center;
@@ -50,19 +59,38 @@ h2 {
     margin-left: 130px;
     background-color: rgba(255, 255, 255, 0.3);
 }
+
+
+
 </style> 
 </head>
+
 <body>
+<div class="block1">
 <div class="block2">
 <img src="anna.jpg" class="photo">
 <h2>Hello, I'm</h2>
-<h1 style="text-align:center"><b>Elen Henderson</b></h1> 
+
+<h1 style="text-align:center"><b>Elen 
+
+Henderson</b></h1> 
 <div class="block3">
-<p>I am A Blogger Far far away, behind the worlds mountains, far from the
-countries Vokalia and Consonantia, there live the blind texts. Separeted
-they live in Bookmarksgrove right at the coast of the Semantics, a large
+<p>I am A Blogger Far far away, behind the worlds 
+
+mountains, far from the
+countries Vokalia and Consonantia, there live the 
+
+blind texts. Separeted
+they live in Bookmarksgrove right at the coast of 
+
+the Semantics, a large
                           language ocean. <p>
-<a href="https://eriniafuria.github.io/calculator.html">web site</a>
+<a 
+
+href="https://eriniafuria.github.io/calculator.html"
+
+>web site</a>
+</div>
 </div>
 </div>
 </body>
