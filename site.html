@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-
 
-initial-scale=1.0">
+width, initial-scale=1.0">
 <title>My site</title>
 <style>
+
 .block1 {
-background-position: center;
-width: 100%;
-height: 100%;
-}
-.block1::before {
-content:"";
-display: block;
-position: absolute;
-left: 0;
-top: 0;
+
+background-position: center; 
+background-repeat: no-repeat;
 width: 100%;
 height: 100%;
 background-image: url("DSC_0677.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 50% 0;
-background-size: cover;
-opacity:0.9;  
-}
-.block1::after {
-content:"";
-position: absolute;
-width: 100%;
-height: 100%;
-align: center;
-background-color: rgba(255, 255, 255, 0.4);
+background-size: cover
 }
 .block2 {
-width: 50%;
-background: #f8f8f8;
-padding: 50px;
-position: absolute;
-align: center;
-margin-top: 1px;
-margin-bottom: 300px;
-margin-right: 150px;
-margin-left: 250px;
-background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    align: center;
+    background-color: rgba(255, 255, 255, 0.3);
 }
-h2 {
-text-align:center;
-color:#404040;
+.block3 {
+    width: 100%;
+    height: 100%;
+    align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .photo {
-display: block;
-padding: 10px;
-align: center;
-margin-top: 0px;
-margin-bottom: auto;
-margin-right: auto;
-margin-left: auto;
-border-radius: 50%;
-width: 200px;
+    display: block;
+    padding: 10px;
+    align: center;
+    margin-top: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    width: 200px;
 }
-
+h2 {
+   text-align:center;
+   color:#404040;
+}
 </style>
 </head>
 <body>
-<div class="block1"></div>
+<div class="block1">
 <div class="block2">
+<div class="block3">
 <img src="anna.jpg" class="photo">
-<h2>Hello, I'm</h2>
-<h1 style="text-align:center"><b>Anna Maltseva</b></h1>
+<h2><i>Hello, I'm</i></h2>
+<h1 style="text-align:center"><b><i>Anna 
+
+Maltseva</i></b></h1>
+</div>
+</div>
 </div>
 </body>
 </html>
