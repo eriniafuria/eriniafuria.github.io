@@ -50,7 +50,6 @@ width: 217px;
 height: 259px;
 position: static;
 align: center;
-background-color: blue;
 align-self: center;
 }
 * {
@@ -60,23 +59,29 @@ align-self: center;
 display: flex;
 width: 60%;
 height: 10%;
-align: center;
-flex-wrap: row wrap;
+flex-wrap: wrap;
 justify-content: space-evenly;
-background-color: rgba(102, 217,255, 0.2);
+font-size: 23px:
 flex-basis: auto;
 align-items: center;
+text-align:center;
 }
 /* Create three equal columns that sits next to each other */
 .column {
 flex: 33,33%;
 align-items: center;
-padding:20px;
+border: 4px double grey;
+background-color: rgba(102, 217,255);
+width: calc(90% / 3);
 }
 .text {
 line-height: 1%;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 padding:5px;
+}
+.text-projects {
+font-size: 19px;
+padding: 10px;
 }
 </style>
 </head>
@@ -94,16 +99,16 @@ height: 100%;">
 </div>
 <div class="row">
 ​ <div class="column">
-​ ​ <p><b> Calculator </b><br>
+​ ​ <p class="text-projects"><b> Calculator </b><br>
 ​ ​ This is my first project.
 ​ ​ It looks ugly but it was my first try.</p>
 ​ </div>
 ​ <div class="column">
-​ ​ <p><b>Password Generator</b><br>
+​ ​ <p class="text-projects"><b>Password Generator</b><br>
 ​ ​ Here You can genarate your password with letters, sighs and symbols.</p>
 ​ </div>
 ​ <div class="column">
-​ ​ <p><b>Table Trip</b><br>
+​ ​ <p class="text-projects"><b>Table Trip</b><br>
 ​ ​ Some short description of my trips in summer-autumn </p>
 ​ </div>
 </div>
