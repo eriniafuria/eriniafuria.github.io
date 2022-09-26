@@ -3,8 +3,6 @@
 height: 100%;">
 <head>
 <style>
-body {
-}
 .block1 {
 background-image: url("DSC_0677.jpg");
 background-size: 100% 100%;
@@ -50,11 +48,10 @@ border-radius: 50%;
 width: 217px;
 height: 259px;
 position: static;
-align: center;
 align-self: center;
-}​
+}
 * {
-​ box-sizing: border-box;
+box-sizing: border-box;
 }
 .row {
 display: flex;
@@ -62,7 +59,7 @@ width: 100%;
 height: 100%;
 flex-wrap: wrap;
 justify-content: space-evenly;
-font-size: 23px:
+font-size: 23px;
 flex-basis: auto;
 align-items: center;
 text-align:center;
@@ -76,7 +73,7 @@ margin: 1%;
 border-radius: 8px 8px 8px 8px;
 }
 #column1:hover {
-background-color: rgba(68,138,244);
+background-color: rgb(68,138,244);
 }
 #column2 {
 align-items: center;
@@ -86,7 +83,7 @@ margin: 1%;
 border-radius: 8px 8px 8px 8px;
 }
 #column2:hover {
-background-color: rgba(68,138,244);
+background-color: rgb(68,138,244);
 }
 #column3 {
 align-items: center;
@@ -96,7 +93,7 @@ margin: 1%;
 border-radius: 8px 8px 8px 8px;
 }
 #column3:hover {
-background-color: rgba(68,138,244);
+background-color: rgb(68,138,244);
 }
 .colors {
 box-shadow: 2px 2px 2px 2px grey;
@@ -134,35 +131,46 @@ height: 100%;">
 <h1 class="text"><b><i>Anna Maltseva</i></b></h1>
 </div>
 <div class="row">
-​ <div id="column1" class="colors" onclick="changeColor1()">
-​ ​ <p class="text-projects"><b> Calculator </b><br>
-​ ​ This is my first project.
-​ ​ It looks ugly but it was my first try.</p>
-​ </div>
-​ <div id="column2" class="colors" onclick="changeColor2()">
-​ ​ <p class="text-projects"><b>Password Generator</b><br>
-​ ​ Here You can genarate your password with letters, sighs and symbols.</p>
-​ </div>
-​ <div id="column3" class="colors" onclick="changeColor3()">
-​ ​ <p class="text-projects"><b>Table Trip</b><br>
-​ ​ Some short description of my trips in summer-autumn </p>
-​ </div>
+<div id="column1" class="colors">
+<p class="text-projects"><b> Calculator </b><br>
+This is my first project.
+It looks ugly but it was my first try.</p>
+</div>
+<div id="column2" class="colors">
+<p class="text-projects"><b>Password Generator</b><br>
+Here You can genarate your password with letters, sighs and symbols.</p>
+</div>
+<div id="column3" class="colors">
+<p class="text-projects"><b>Table Trip</b><br>
+Some short description of my trips in summer-autumn </p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <script>
-function changeColor1() {​
+window.onload = function() {
+var element = document.getElementById("column1");
+element.onmousedown = changeColor1;
+element.onmouseup = changeColor1;
+var element = document.getElementById("column2");
+element.onmousedown = changeColor2;
+element.onmouseup = changeColor2;
+var element = document.getElementById("column3");
+element.onmousedown = changeColor3;
+element.onmouseup = changeColor3;
+}
+function changeColor1() {
 var element = document.getElementById("column1");
 element.classList.remove("colors");
 element.classList.add("colorsNew");
 }
-function changeColor2() {​
+function changeColor2() {
 var element = document.getElementById("column2");
 element.classList.remove("colors");
 element.classList.add("colorsNew");
 }
-function changeColor3() {​
+function changeColor3() {
 var element = document.getElementById("column3");
 element.classList.remove("colors");
 element.classList.add("colorsNew");
