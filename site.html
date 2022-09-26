@@ -111,11 +111,6 @@ padding:5px;
 font-size: 19px;
 padding: 10px;
 }
-.btn {
-width: 25%;
-height: 150px;
-overflow: invisible;
-}
 </style>
 </head>
 <body style="width: 100%;
@@ -151,14 +146,11 @@ Some short description of my trips in summer-autumn </p>
 <script>
 window.onload = function() {
 var element = document.getElementById("column1");
-element.onmousedown = changeColor1;
-element.onmouseup = changeColor1;
+element.onclick = changeColor1;
 var element = document.getElementById("column2");
-element.onmousedown = changeColor2;
-element.onmouseup = changeColor2;
+element.onclick = changeColor2;
 var element = document.getElementById("column3");
-element.onmousedown = changeColor3;
-element.onmouseup = changeColor3;
+element.onclick = changeColor3;
 }
 function changeColor1() {
 var element = document.getElementById("column1");
