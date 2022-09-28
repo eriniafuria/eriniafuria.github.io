@@ -64,7 +64,9 @@ flex-basis: auto;
 align-items: center;
 text-align:center;
 }
-/* Create three equal columns that sits next to each other */
+/* Create three equal columns that sits next to each 
+
+other */
 #column1 {
 align-items: center;
 width: 25%;
@@ -132,12 +134,18 @@ This is my first project.
 It looks ugly but it was my first try.</p>
 </div>
 <div id="column2" class="colors">
-<p class="text-projects"><b>Password Generator</b><br>
-Here You can genarate your password with letters, sighs and symbols.</p>
+<p class="text-projects"><b>Password 
+
+Generator</b><br>
+Here You can genarate your password with letters, 
+
+sighs and symbols.</p>
 </div>
 <div id="column3" class="colors">
 <p class="text-projects"><b>Table Trip</b><br>
-Some short description of my trips in summer-autumn </p>
+Some short description of my trips in summer-autumn 
+
+</p>
 </div>
 </div>
 </div>
@@ -147,7 +155,7 @@ Some short description of my trips in summer-autumn </p>
 window.onload = function() {
 var element = document.getElementById("column1");
 element.onmousedown = changeColor1;
-element.onmouseup = changeColor1;
+element.onmouseup = changeColorback1;
 var element = document.getElementById("column2");
 element.onmousedown = changeColor2;
 element.onmouseup = changeColor2;
@@ -159,6 +167,11 @@ function changeColor1() {
 var element = document.getElementById("column1");
 element.classList.remove("colors");
 element.classList.add("colorsNew");
+}
+function changeColorback1() {
+var element = document.getElementById("column1");
+element.classList.remove("colorsNew");
+element.classList.add("colors");
 }
 function changeColor2() {
 var element = document.getElementById("column2");
