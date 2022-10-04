@@ -153,15 +153,12 @@ Some short description of my trips in summer-autumn
 </div>
 <script>
 window.onload = function() {
-var element = document.getElementById("column1");
+let ids=["column1","column2","column3"]
+for (i=0;i<3;i++) {
+let element = document.getElementById (ids[i]);
 element.onmousedown = onProjectButtonMouseDown;
 element.onmouseup = onProjectButtonMouseUp;
-var element = document.getElementById("column2");
-element.onmousedown = changeColor2;
-element.onmouseup = changeColor2;
-var element = document.getElementById("column3");
-element.onmousedown = changeColor3;
-element.onmouseup = changeColor3;
+}
 }
 function onProjectButtonMouseDown() {
 var element = document.getElementById("column1");
