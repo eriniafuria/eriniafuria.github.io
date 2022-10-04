@@ -160,15 +160,14 @@ element.onmousedown = onProjectButtonMouseDown;
 element.onmouseup = onProjectButtonMouseUp;
 }
 }
-function onProjectButtonMouseDown() {
-var element = document.getElementById("column1");
-element.classList.remove("colors");
-element.classList.add("colorsNew");
+function onProjectButtonMouseDown(event) {
+event.currentTarget.classList.remove("colors");
+event.currentTarget.classList.add("colorsNew");
+console.log(event.currentTarget);
 }
-function onProjectButtonMouseUp() {
-var element = document.getElementById("column1");
-element.classList.remove("colorsNew");
-element.classList.add("colors");
+function onProjectButtonMouseUp(event) {
+event.currentTarget.classList.remove("colorsNew");
+event.currentTarget.classList.add("colors");
 }
 </script>
 </body>
