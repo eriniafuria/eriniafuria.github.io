@@ -154,8 +154,8 @@ Some short description of my trips in summer-autumn
 <script>
 window.onload = function() {
 var element = document.getElementById("column1");
-element.onmousedown = changeColor1;
-element.onmouseup = changeColorback1;
+element.onmousedown = onProjectButtonMouseDown;
+element.onmouseup = onProjectButtonMouseUp;
 var element = document.getElementById("column2");
 element.onmousedown = changeColor2;
 element.onmouseup = changeColor2;
@@ -163,25 +163,15 @@ var element = document.getElementById("column3");
 element.onmousedown = changeColor3;
 element.onmouseup = changeColor3;
 }
-function changeColor1() {
+function onProjectButtonMouseDown() {
 var element = document.getElementById("column1");
 element.classList.remove("colors");
 element.classList.add("colorsNew");
 }
-function changeColorback1() {
+function onProjectButtonMouseUp() {
 var element = document.getElementById("column1");
 element.classList.remove("colorsNew");
 element.classList.add("colors");
-}
-function changeColor2() {
-var element = document.getElementById("column2");
-element.classList.remove("colors");
-element.classList.add("colorsNew");
-}
-function changeColor3() {
-var element = document.getElementById("column3");
-element.classList.remove("colors");
-element.classList.add("colorsNew");
 }
 </script>
 </body>
